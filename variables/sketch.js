@@ -21,6 +21,9 @@ function draw() {
 
 	//face
 	fill("#F3DCAB");
+
+	//x++;
+	//s++;
 	
 	//ellipse(200, 180, 200, 250);
 	ellipse(x, y, s);
@@ -35,7 +38,7 @@ function draw() {
 	stroke("#DCC38E");
 	strokeWeight(2);
 	noFill();
-	line(x - 50, 250, 200, 230);
+	line(x - 50, y + 70, 200, s+30);
 
 
 	// x = 200
