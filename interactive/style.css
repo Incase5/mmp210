@@ -1,0 +1,23 @@
+
+body{
+	background-color: #bfbfbf;
+	font-family: 'Noto Serif', serif;	
+	color:#115268;
+}
+
+h2{
+	font-family: 'Patua One', cursive;
+	margin-bottom: 0;
+}
+
+h1{
+	font-family: 'Patua One', cursive;
+	font-size: 36px;
+	margin-bottom: 0;
+}
+
+
+p{
+	text-align: justify;
+}
+

@@ -1,9 +1,9 @@
 /*
 Jeremy Bautista
-Self portrait with variables
+Interactive Self portrait 
 */
 
-var x = 200;
+var x; //original size 200
 var y = 180;
 
 var s = 200;
@@ -12,6 +12,7 @@ var s = 200;
 
 function setup() {
 	createCanvas(640, 360);
+	x = width/2;
 }
 
 function draw() {
@@ -28,20 +29,20 @@ function draw() {
 	//ellipse(200, 180, 200, 250);
 	ellipse(x, y, s);
 	
+	var ms = map(mouseX, 0, width, 10, 150);
+
 	//eyes 
 	fill("#946D1F");
-	ellipse(x - 50, y - 25, 50, s/2);	//left eye
-	ellipse(x + 50, y - 30, 40, s/2.5);	//right eye
+	ellipse(x - 50, y - 25, 50, ms/2);	//left eye
+	ellipse(x + 50, y - 30, 40, ms/2.5);	//right eye
+
+	
+
 
 	//mouth
 	rectMode(CENTER);
 	stroke("#DCC38E");
 	strokeWeight(2);
 	noFill();
-	line(x - 50, y + 70, 200, s+30);
-
-
-	// x = 200
-	// y = 180
-	// s = 200
+	line(x, y + 70, 250, s+30);
 }
