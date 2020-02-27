@@ -7,7 +7,7 @@ Meme Version 1
 var kirbyImage;
 
 function preload(){
-	kirbyImage = loadImage("kirby.jpg");
+	kirbyImage = loadImage("kirby.jpeg");
 }
 
 function setup(){
@@ -22,18 +22,18 @@ function draw(){
 	image(kirbyImage, 0, 0, 500, 500);
 	
 
-	textSize(100);
+	textSize(70);
 	fill('blue');
 	stroke('purple');
 	strokeWeight('3');
 	textStyle(ITALIC);
-	text("Hello world", 0, 80);
+	text("my face", 0, 60);
 
 	textSize(45);
 	textStyle(NORMAL);
 
 
-	var welcome = 'When I "fix" an error';
+	var welcome = 'When I "fix" code errors';
 	var end = map(frameCount, 0, 200, 0, welcome.length);
 	text(welcome.substring(0, end), 0, 480)
 
