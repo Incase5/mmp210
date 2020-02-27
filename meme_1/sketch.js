@@ -4,10 +4,10 @@ Meme Version 1
 2/25/2020
 */
 
-var catImage;
+var kirbyImage;
 
 function preload(){
-	catImage = loadImage("cat.jpg");
+	kirbyImage = loadImage("kirby.jpg");
 }
 
 function setup(){
@@ -19,7 +19,7 @@ function draw(){
 	background('skyblue');
 
 	//draw the image
-	image(catImage, 0, 0, 500, 500);
+	image(kirbyImage, 0, 0, 500, 500);
 	
 
 	textSize(100);
@@ -33,7 +33,7 @@ function draw(){
 	textStyle(NORMAL);
 
 
-	var welcome = 'Welcome to my website';
+	var welcome = 'When I "fix" an error';
 	var end = map(frameCount, 0, 200, 0, welcome.length);
 	text(welcome.substring(0, end), 0, 480)
 
