@@ -15,7 +15,7 @@ var kirbSizeSpeed = 5;
 var kirbX;
 
 var counter = 0;
-var instructions = "click to shoot";
+var instructions = "click here";
 var x;
 var y;
 
@@ -44,13 +44,14 @@ function mousePressed(){
 	}
 
 	if (mouseX > width/2 && mouseY > height/2) {
-		instructions = 'now shoot again';
+		// bottom right
+		instructions = 'Now Here';
 		y = 50;
 	} else if (mouseX > width/2 && mouseY < height/2) {
-		instructions = 'finish it';
+		instructions = 'Once More';
 		x = 50;
 	} else if (mouseX < width/2 && mouseY < height/2) {
-		instructions = 'ACE';
+		instructions = 'Nice';
 		y = height - 100;
 	}
 }
@@ -62,12 +63,6 @@ function draw(){
 	if (counter == 0) {
 		//imageMode(CENTER);
 		image(kirbyImage, 0, 0, 500, 500);
-
-		kirbSize += kirbSizeSpeed;
-		if (kirbSize > width * 2 || kirbSize < width - kirbSizeSpeed) {
-			kirbSizeSpeed *= -1;
-		}
-
 	} else if (counter == 1) {
 		image(kirbyShoot, 0, 0, 500, 500);
 	} else if (counter == 2) {
@@ -83,4 +78,6 @@ function draw(){
 	textStyle(ITALIC);
 	textSize(45);
 	textStyle(NORMAL);
+
+	text(instructions, x, y, 150);
 }
