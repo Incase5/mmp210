@@ -1,6 +1,6 @@
 /*
 Jeremy Bautista
-Meme Version 3 
+Meme Version 2 
 3/3/2020
 */
 
@@ -44,6 +44,7 @@ function mousePressed(){
 	}
 
 	if (mouseX > width/2 && mouseY > height/2) {
+		// bottom right
 		instructions = 'now shoot again';
 		y = 50;
 	} else if (mouseX > width/2 && mouseY < height/2) {

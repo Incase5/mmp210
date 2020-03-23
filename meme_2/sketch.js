@@ -15,7 +15,7 @@ var kirbSizeSpeed = 5;
 var kirbX;
 
 var counter = 0;
-var instructions = "click to shoot";
+var instructions = "click here";
 var x;
 var y;
 
@@ -45,13 +45,13 @@ function mousePressed(){
 
 	if (mouseX > width/2 && mouseY > height/2) {
 		// bottom right
-		instructions = 'now shoot again';
+		instructions = 'Now Here';
 		y = 50;
 	} else if (mouseX > width/2 && mouseY < height/2) {
-		instructions = 'finish it';
+		instructions = 'Once More';
 		x = 50;
 	} else if (mouseX < width/2 && mouseY < height/2) {
-		instructions = 'ACE';
+		instructions = 'Nice';
 		y = height - 100;
 	}
 }
@@ -84,4 +84,6 @@ function draw(){
 	textStyle(ITALIC);
 	textSize(45);
 	textStyle(NORMAL);
+
+	text(instructions, x, y, 150);
 }
