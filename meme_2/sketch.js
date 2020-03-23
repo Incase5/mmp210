@@ -63,12 +63,6 @@ function draw(){
 	if (counter == 0) {
 		//imageMode(CENTER);
 		image(kirbyImage, 0, 0, 500, 500);
-
-		kirbSize += kirbSizeSpeed;
-		if (kirbSize > width * 2 || kirbSize < width - kirbSizeSpeed) {
-			kirbSizeSpeed *= -1;
-		}
-
 	} else if (counter == 1) {
 		image(kirbyShoot, 0, 0, 500, 500);
 	} else if (counter == 2) {
