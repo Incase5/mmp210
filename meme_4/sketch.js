@@ -1,6 +1,6 @@
 /*
 Jeremy Bautista
-Meme Version 4
+Meme Version 4 
 3/3/2020
 */
 
@@ -61,14 +61,30 @@ function draw(){
 
 	//draw the image
 	if (counter == 0) {
-		//imageMode(CENTER);
+		imageMode(CORNERS)
 		image(kirbyImage, 0, 0, 500, 500);
 	} else if (counter == 1) {
-		image(kirbyShoot, 0, 0, 500, 500);
+		imageMode(CENTER);
+		image(kirbyShoot, width/2, height/2, kirbSize, kirbSize);
+		
+		kirbSize += kirbSizeSpeed;
+		if (kirbSize > width * 1.5 || kirbSize < width - kirbSizeSpeed) {
+			kirbSizeSpeed *= -1;
+		}
 	} else if (counter == 2) {
-		image(kirbyBang, 0, 0, 500, 500);
+		image(kirbyBang, width/2, height/2, kirbSize, kirbSize);
+		
+		kirbSize += kirbSizeSpeed;
+		if (kirbSize > width * 1.5 || kirbSize < width - kirbSizeSpeed) {
+			kirbSizeSpeed *= -1;
+		}
 	}  else {
-		image(kirbyBoom, 0, 0, 500, 500);
+		image(kirbyBoom, width/2, height/2, kirbSize, kirbSize);
+		
+		kirbSize += kirbSizeSpeed;
+		if (kirbSize > width * 1.5 || kirbSize < width - kirbSizeSpeed) {
+			kirbSizeSpeed *= -1;
+		}
 	}
 	
 	textSize(40);
