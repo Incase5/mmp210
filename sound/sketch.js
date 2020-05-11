@@ -3,7 +3,6 @@ Jeremy Bautista
 Pattern Version 3
 */
 
-// global sound variables
 var birdSound;
 var music;
 
@@ -14,7 +13,7 @@ function preload() {
 
 function setup() {
 	createCanvas(640, 360);
-	birdSound.playMode("restart"); // the default is "sustain"
+	birdSound.playMode("restart"); 
 }
 
 function draw() {
@@ -31,14 +30,10 @@ function draw() {
 	fill('white');
 	rect(0, mouseY, width, 10);
 
-	// var pan = map(mouseX, 0, width, -1, 1);
-	// music.pan(pan);
-
 	var rate = map(mouseX, 0, width, 0.5, 2);
 	music.rate(rate);
 
 	rect(mouseX, 0, 10, height);
-
 }
 
 function mousePressed() {
@@ -46,7 +41,7 @@ function mousePressed() {
 
 	if (music.isPlaying()) {
 		music.pause();
-		// music.stop();
+
 	} else {
 		music.play();
 	}
