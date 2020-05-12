@@ -1,48 +1,49 @@
 /*
 Jeremy Bautista
-Pattern Version 3
+Sound Example
 */
 
-var birdSound;
-var music;
+var drum1;
+var song;
 
 function preload() {
-	birdSound = loadSound("birds.wav");
-	music = loadSound("Rolemusic_-_Omou_matsu.mp3");
+	drum1 = loadSound("drum_1.wav");
+	song = loadSound("Jon_E_Alpha_-_09_-_Heavy_Day.mp3");
 }
 
 function setup() {
 	createCanvas(640, 360);
-	birdSound.playMode("restart"); 
+	drum1.playMode("restart"); 
 }
 
 function draw() {
-	if (music.isPlaying()) {
-		background('green');
+	if (song.isPlaying()) {
+		background('skyblue');
 	} else {
-		background(220);
+		background('black');
 	}
 
-	var volume = map(mouseY, 0, height, 1, 0);
-	music.setVolume(volume);
+	var vol = map(mouseY, 0, height, 0, 1);
+	song.setVolume(vol);
+	drum1.setVolume(vol);
 
 	noStroke();
-	fill('white');
-	rect(0, mouseY, width, 10);
+	fill('orange');
+	rect(0, mouseY, width, 2);
 
-	var rate = map(mouseX, 0, width, 0.5, 2);
-	music.rate(rate);
+	var pan = map(mouseX, 0, width, 0.5, 2);
+	song.pan(pan);
 
-	rect(mouseX, 0, 10, height);
+	rect(mouseX, 0, 2, height);
 }
 
 function mousePressed() {
-	birdSound.play();
+	drum1.play();
 
-	if (music.isPlaying()) {
-		music.pause();
+	if (song.isPlaying()) {
+		song.pause();
 
 	} else {
-		music.play();
+		song.play();
 	}
 }
