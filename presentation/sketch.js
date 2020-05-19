@@ -16,7 +16,7 @@ function setup(){
 function draw(){
 	background('skyblue');
 
-	text('slide' + currentSlide, 100, 100);
+	text('Slide' + currentSlide, 100, 100);
 
 	fill('white');
 	stroke('black');
@@ -27,4 +27,10 @@ function draw(){
 	noStroke();
 	textAlign(CENTER, CENTER);
 	text("Next", nextButtonX, nextButtonY, nextButtonW, nextButtonH);
+}
+
+function mousePressed(){
+	if (mouseX > nextButtonX && mouseX < nextButtonX + nextButtonW && mouseY > nextButtonY && mouseY < nextButtonY + nextButtonH){
+		currentSlide++;
+	} 
 }
