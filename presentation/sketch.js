@@ -35,7 +35,7 @@ function draw(){
 	else if (currentSlide == 1) {
 		title = "What It Will Do";
 		description = "The user will use either the mouse and keyboard to interact with the piano.";
-		image(stylophoneImage, 0, height / 2, stylophoneImage.width / 2, stylophoneImage.height / 2)
+		image(stylophoneImage, 0, height/2, stylophoneImage.width/2, stylophoneImage.height/2)
 
 	} 
 	else if (currentSlide == 2) {
