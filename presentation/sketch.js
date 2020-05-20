@@ -21,12 +21,32 @@ function setup(){
 function draw(){
 	background('skyblue');
 
-	//text('Slide ' + currentSlide, 100, 100);
-	var title;
+	var title; 
+	var description;
+	
+	if (currentSlide == 0) {
+		title = "Jeremy, Final Project";
+		description = "I will create a page that will have the user interact with a mini piano.";
+	} 
+	else if (currentSlide == 1) {
+		title = "What It Will Do";
+		description = "The user will use either the mouse and keyboard to interact with the piano.";
 
-	textSize(80);
+	} 
+	else if (currentSlide == 2) {
+		title = "What I will use";
+		description = "I will be using p5 shapes, as well as sound to make the keyboard, as well as the sounds that they output ehrn pressed.";
+	}
 
+	textSize(70);
+	fill('yellow');
+	noStroke();
+	textAlign(LEFT, TOP);
+	text(title, 20, 70);
 
+	// display description
+	textSize(40);
+	text(description, 20, 200, width - 40);
 	fill('white');
 	stroke('black');
 
